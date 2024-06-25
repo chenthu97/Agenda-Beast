@@ -2,6 +2,8 @@
 
  Agenda Beast is a project that was created for users to organize their tasks in an efficient manner.
 
+ To use the application use the following URL https://agendabeast.pythonanywhere.com
+
  Agenda Beast was made using flask, html, and css
 
  When a user accesses the website they will be greeted with the following page
