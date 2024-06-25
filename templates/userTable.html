@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agenda Beast</title>
+        <link href='testStyle.css' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='tableStyle.css') }}">
+    </head>
+
+    <body>
+        <div>
+            <a href="#" class="logo">Agenda Beast</a>
+            <a href="/updateTable{{userName}}" class="pages">Current Tasks</a>
+            <a href="/add{{userName}}" class="pages">Add Task</a>
+            <a href="/getPastTasks{{userName}}" class="pages">Finised Tasks</a>
+        </div>
+
+        <form action="#" method="post">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Task</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Due Date</th>
+                        <th scope="col">{{finalCol}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in values %}
+                        <tr>
+                            <td>{{item.task}}</td>
+                            <td>{{item.description}}</td>
+                            <td>{{item.dueDate}}</td>
+                            <td>
+                                <input type="checkbox" name="finishedTasks" value="{{item.task}}">
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="submit-box">
+                <button type="submit" class="update-button">Update Table</button>
+            </div>
+        </form>
+    </body>
+
+</html>

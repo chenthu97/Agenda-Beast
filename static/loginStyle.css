@@ -1,0 +1,115 @@
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+color: black;
+font-family: monospace;
+text-align: left;
+font-size: 8em;
+overflow: hidden; /* Ensures the content is not revealed until the animation */
+border-right: .20em solid black; /* The typwriter cursor */
+white-space: nowrap; /* Keeps the content on a single line */
+margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+letter-spacing: .15em; /* Adjust as needed */
+animation: 
+  typing 3.5s steps(18),
+  blink-caret .5s step-end infinite alternate-reverse;
+}
+
+/* The typing effect */
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+from, to { border-color: transparent }
+50% { border-color: black }
+}
+
+.Login {
+    color: black;
+    text-align: center;
+    font-size: 2em;
+    font-family: monospace;
+}
+
+body {
+    background-color: #ADD8E6;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+.input-box {
+    text-align: center;
+    font-family: monospace;
+}
+
+.input-box input{
+    display: inline-block; /* inline elements are those which do not start on a new line and appear next to the previous element on the line */
+    width: 20%; 
+    height: 10px;
+    text-align: center; 
+    font-size: 2em;
+    background: white;
+    border: none;
+    outline: none;
+    border-radius: 40px; /* making the edges rounded */
+    color: black;
+    font-family: monospace;
+    padding: 20px 45px 20px 20px; /* padding specifies the space between the content of a box annd it's border */
+    margin-top: 20px; 
+  }
+
+  .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set the height of the container to 100% of the viewport height */
+  }
+
+  .submit-box {
+    text-align: center;
+  }
+
+  .flash-message {
+    text-align: center;
+    font-size: 2em;
+    color: black;
+    font-family: monospace;
+  }
+
+  .submit-button {
+    width: 200px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: white;
+    border: solid 1px transparent;
+    color: black;
+    font-family: monospace;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.submit-button:hover {
+    border: solid 1px black;
+}
+
+a:link { 
+  text-decoration: none; 
+} 
+
+a:visited { 
+  text-decoration: none; 
+} 
+
+.pages {
+  color: black;
+  font-family: monospace;
+  margin-right: 50px;
+  margin-bottom: 3000px;
+}
+
+.pages:hover {
+  text-decoration: underline; /* Adds underline on hover */
+}
+

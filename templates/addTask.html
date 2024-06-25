@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agenda Beast</title>
+        <link href='taskStyle.css' rel='stylesheet'>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='taskStyle.css') }}">
+    </head>
+
+    <body>
+        <div>
+            <a href="#" class="logo">Agenda Beast</a>
+            <a href="/updateTable{{userName}}" class="pages">Current Tasks</a>
+            <a href="add{{userName}}" class="pages">Add Task</a>
+            <a href="/getPastTasks{{userName}}" class="pages">Finised Tasks</a>
+        </div>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                    <div class="flash-message">
+                        <p>{{msg}}</p>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form action="#" method="post">
+            <table class="content-table">
+                <tbody>
+                    <tr>
+                        <td><label for="taskName">Task Name:</label></td>
+                        <td class="td-input"><input type="text" id="taskName" name="taskName" placeholder="Enter task name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="description">Description:</label></td>
+                        <td class="td-input"><input type="text" id="description" name="description" placeholder="Enter description" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dueDate">Due Date:</label></td>
+                        <td class="td-input"><input type="text" id="dueDate" name="dueDate" placeholder="Enter due date" required></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="submit-box">
+                <button type="submit" class="update-button">Add New Task</button>
+            </div>
+        </form>
+    </body>
+</html>
+
